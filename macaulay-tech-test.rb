@@ -1,5 +1,8 @@
 require 'json'
 require 'time'
+# Iterate through data and:
+## Average % of likes vs. dislikes for 12 videos
+## ~ Bonus ~ the average time interval between videos
 
 file        = File.read('zoella_videos.json')
 videos_hash = JSON.parse(file)
@@ -14,6 +17,7 @@ def calculation_loop(videos)
     highest_average = 0
     video_average   = video['likes'] / video['dislikes']
     time_published  = Time.parse(video['published_at'])
+
 
     if highest_average < video_average
       highest_average = video_average
@@ -54,8 +58,6 @@ def print_results(total_views, most_liked, like_average, time_interval)
 end
 
 calculation_loop(videos)
-
-
 # Done:
 # Read the JSON file, store data
 ## Total number of views
