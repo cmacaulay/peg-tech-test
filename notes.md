@@ -12,5 +12,5 @@
 
 ## Necessary Calculations:
 - Percentage value of likes vs. dislikes; highest, average
-- Total number of views accross all videos
+- Total number of views across all videos
 - All of the time intervals between published at timestamps, average
